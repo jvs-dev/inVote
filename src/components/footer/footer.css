@@ -1,0 +1,49 @@
+.footer {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0px;
+}
+
+.footer.active {
+    display: flex;
+}
+
+.footer__a {
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 5px;
+    color: var(--secundary-color);
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0px;
+    transition: 0.3s;
+    animation: show 1s;
+}
+
+.footer__a ion-icon {
+    font-size: 22px;
+}
+
+.footer__a:hover {
+    color: cyan;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

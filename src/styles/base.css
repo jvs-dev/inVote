@@ -1,0 +1,19 @@
+:root {
+    --black: #000;
+    --background-black: #2A2438;
+    --primary-color: #352F44;
+    --secundary-color: #5C5470;
+    --white-gray: #DBD8E3;
+    --white: #fff;
+}
+
+body {
+    margin: 0px;
+    min-height: 100vh;
+    background: var(--background-black);
+}
+
+#main {
+    font-family: "Poppins", sans-serif;
+    height: 100%;    
+}

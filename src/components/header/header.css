@@ -1,0 +1,21 @@
+.header {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+
+.header.active {
+    display: flex;
+}
+
+.header__logo {
+    font-family: "Poppins", sans-serif;    
+    font-weight: 700;
+    font-size: 21px;
+    color: var(--white-gray);
+    width: 120px;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}

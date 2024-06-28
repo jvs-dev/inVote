@@ -1,0 +1,43 @@
+.introSection {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: var(--background-black);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    font-size: 38px;
+    border-radius: 0px;
+    transition: 0.5s;
+}
+
+.introSection.active {
+    display: flex;
+}
+
+.introSection.loaded {        
+    height: 10vh;
+    width: 120px;
+    font-size: 14px;
+    border-radius: 0px 360px 360px 360px;
+}
+
+.introSection__h1 {
+    font-family: "Poppins", sans-serif;    
+    font-weight: 700;
+    color: var(--white-gray);
+    margin: 20px 0px;
+    animation: show 1s;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
