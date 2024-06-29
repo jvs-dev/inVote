@@ -35,7 +35,7 @@ function loadDashboard() {
                         <span class="dashboard__span">${element[1].votes} votos</span>
                     `
                     article.onclick = function () {
-                        document.getElementById("inVoteDataLink").textContent = `http://localhost:5173/#${element[0]}`
+                        document.getElementById("inVoteDataLink").textContent = `${window.location.origin}/#${element[0]}`
                         alterToSection(document.getElementById("inVoteDataSection"))
                         getSurveyData(element[0]).then(answerData => {
                             answerData.forEach(answer => {

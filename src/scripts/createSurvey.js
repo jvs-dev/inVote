@@ -62,7 +62,7 @@ function loadSurveyItens() {
 
 createSurvey.onclick = function () {
     createSurveyData(surveyTitleInput.value, actualItens).then(docId => {
-        shareSection(`http://localhost:5173/#${docId}`)
+        shareSection(`${window.location.origin}/#${docId}`)
     })
 }
 

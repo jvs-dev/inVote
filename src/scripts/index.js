@@ -12,7 +12,12 @@ let copyLink = document.getElementById("copyLink")
 let viewInvoteSection = document.getElementById("viewInvoteSection")
 let homeSection = document.getElementById("homeSection")
 let goToDashboard = document.getElementById("goToDashboard")
+let InVolteLogo = document.getElementById("InVolteLogo")
 
+
+InVolteLogo.onclick = function () {
+    alterToSection(document.getElementById("homeSection"))
+}
 
 goToDashboard.onclick = function () {
     verifyUserLogin().then(user => {
