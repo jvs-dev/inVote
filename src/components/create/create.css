@@ -1,0 +1,158 @@
+.main__create {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+    height: 100%;
+    padding: 0px 20px 60px 20px;
+}
+
+.create__inputTitle {
+    background: var(--primary-color);
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--white-gray);
+    margin: 0px 0px 20px 0px;
+    outline-width: 0px;
+    border: 0px;
+    border-radius: 9px;
+    padding: 8px 20px;
+}
+
+.create__inputTitle::placeholder {
+    opacity: 0.5;
+}
+
+.create__itensDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.create__cardSurveyItem {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px 0px 10px 0px;
+    width: 100%;
+    border-bottom: solid 2px var(--primary-color);
+}
+
+.create__cardSurveyItem:nth-last-child(1) {
+    border-bottom: solid 2px transparent;
+}
+
+.cardSurveyItem__span {
+    font-family: "Poppins", sans-serif;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.cardSurveyItem__input--1 {
+    font-family: "Poppins", sans-serif;
+    background: var(--white-gray);
+    color: var(--black);
+    font-size: 16px;
+    outline-width: 0px;
+    border: 0px;
+    border-radius: 9px;
+    padding: 8px 14px;
+    width: calc(100% - 58px);
+}
+
+.cardSurveyItem__input--1::placeholder {
+    opacity: 0.8;
+}
+
+.cardSurveyItem__div {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    gap: 8px;
+    margin: 8px 0px 0px 0px;
+}
+
+.cardSurveyItem__input--2 {
+    font-family: "Poppins", sans-serif;
+    background: var(--white-gray);
+    color: var(--black);
+    font-size: 16px;
+    outline-width: 0px;
+    border: 0px;
+    border-radius: 9px;
+    padding: 8px 14px;
+    width: 100%;
+    height: 100%;
+}
+
+.cardSurveyItem__input--2::placeholder {
+    opacity: 0.8;
+}
+
+.cardSurveyItem__div--2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.cardSurveyItem__p {
+    font-family: "Poppins", sans-serif;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0px;
+    position: absolute;
+    top: 0;
+    transform: translateY(-100%);
+}
+
+.cardSurveyItem__input--3 {
+    font-family: "Poppins", sans-serif;
+    background: var(--white-gray);
+    color: var(--black);
+    font-size: 16px;
+    outline-width: 0px;
+    border: 0px;
+    border-radius: 9px;
+    padding: 8px 14px;
+    width: 50px;
+    text-align: center;
+}
+
+.cardSurveyItem__ButtonTrash {
+    background: transparent;
+    border: 0px;
+    outline-width: 0px;
+    color: #f02020;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 8px 0px 0px 0px;
+}
+
+.cardSurveyItem__div--3 {
+    position: fixed;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.cardSurveyItem__Button {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    width: 150px;
+    cursor: pointer;
+    outline-width: 0px;
+    border: 0px;
+    border-radius: 6px;
+    padding: 6px 0px;
+}
