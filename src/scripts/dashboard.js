@@ -52,6 +52,11 @@ function loadDashboard() {
                                     </div>
                                     <p class="inVoteData__article__votes">${answer.selected} votos</p>
                                 `
+                                card.children[0].childNodes.forEach(node => {
+                                    if (node.nodeType === Node.TEXT_NODE && node.textContent.trim() === ',') {
+                                        card.children[0].removeChild(node);
+                                    }
+                                });
                             });
                         })
                     }
