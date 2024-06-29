@@ -21,6 +21,8 @@
   <link rel="stylesheet" href="src/components/viewInVote/viewInVote.css">
   <link rel="stylesheet" href="src/components/error/error.css">
   <link rel="stylesheet" href="src/components/respondedForm/respondedForm.css">
+  <link rel="stylesheet" href="src/components/dashboard/dashboard.css">
+  <link rel="stylesheet" href="src/components/inVoteData/inVoteData.css">
   <title>InVote</title>
 </head>
 
@@ -41,7 +43,7 @@
         em tempo real.</p>
       <div class="home__div"><img class="home__img" src="src/assets/2829247.jpg" alt=""></div>
       <button class="home__btn" id="newInVote">Criar InVote</button>
-      <button class="home__btn">Meus InVotes</button>
+      <button class="home__btn" id="goToDashboard">Meus InVotes</button>
     </section>
     <section class="main__section main__create" id="createSection">
       <input class="create__inputTitle" type="text" placeholder="Titulo da enquete" id="surveyTitleInput">
@@ -76,7 +78,16 @@
     </section>
 
     <section class="main__section main__dashboard" id="dashboardSection">
-
+      
+    </section>
+    <section class="main__section main__inVoteData" id="inVoteDataSection">
+      <h1 class="inVoteData__h1">TowardsToGloryInVotes</h1>
+      <div class="inVoteData__div" id="inVoteDataDiv">        
+      </div>
+      <div class="share__div">
+        <p class="share__link" id="inVoteDataLink"></p>
+        <button class="share__copy" id="reCopyLink"><ion-icon name="copy-outline"></ion-icon></button>      
+      </div>      
     </section>
     <section class="main__section main__viewInvote" id="viewInvoteSection">
       <input class="viewInvote__input" type="text" id="voterName" placeholder="Digite seu nome">
@@ -105,6 +116,7 @@
   <script type="module" src="src/scripts/index.js"></script>
   <script type="module" src="src/scripts/createSurvey.js"></script>
   <script type="module" src="src/scripts/viewSurvey.js"></script>
+  <script type="module" src="src/scripts/dashboard.js"></script>
 </body>
 
 </html>

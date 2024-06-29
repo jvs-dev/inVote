@@ -11,6 +11,22 @@ let shareSectionLink = document.getElementById("shareSectionLink");
 let copyLink = document.getElementById("copyLink")
 let viewInvoteSection = document.getElementById("viewInvoteSection")
 let homeSection = document.getElementById("homeSection")
+let goToDashboard = document.getElementById("goToDashboard")
+
+
+goToDashboard.onclick = function () {
+    verifyUserLogin().then(user => {
+        if (user != undefined) {
+            alterToSection(document.getElementById("dashboardSection"))
+        } else {
+            signIn().then(response => {
+                if (response != undefined) {
+                    alterToSection(document.getElementById("dashboardSection"))
+                }
+            })
+        }
+    })
+}
 
 copyLink.onclick = function () {
     let tempInput = document.createElement("input");
@@ -60,11 +76,11 @@ function loadPage() {
         })
     } else {
         if (localStorage.getItem(`${window.location.hash.replace("#", "")}`) != null) {
-            let obj = JSON.parse(localStorage.getItem(`${window.location.hash.replace("#", "")}`))            
+            let obj = JSON.parse(localStorage.getItem(`${window.location.hash.replace("#", "")}`))
             footer.classList.remove("active")
             introSection.classList.remove("active")
-            homeSection.style.display = "none"      
-            perfilBtn.style.display = "none"      
+            homeSection.style.display = "none"
+            perfilBtn.style.display = "none"
             document.getElementById("respondedName").textContent = `${obj.name}`
             document.getElementById("respondedItem").textContent = `${obj.itemName}`
             alterToSection(document.getElementById("respondedForm"))

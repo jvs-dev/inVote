@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { getAuth, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, signOut } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-import { getFirestore, doc, getDoc, getDocs, setDoc, collection, addDoc, updateDoc, increment, deleteDoc, serverTimestamp, arrayUnion, arrayRemove } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import { getFirestore, doc, getDoc, getDocs, query, where, setDoc, collection, addDoc, updateDoc, increment, deleteDoc, serverTimestamp, arrayUnion, arrayRemove } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 import { firebaseConfig } from "./firebaseConfig";
 import { verifyUserLogin } from "./user";
 import { createError } from "./error";
@@ -9,6 +9,29 @@ const auth = getAuth();
 const provider = new GoogleAuthProvider();
 const db = getFirestore(app);
 
+
+export async function getMySurveys(email) {
+    return new Promise(async (resolve) => {
+        let response = []
+        const q = query(collection(db, "surveys"), where("creator", "==", email));
+        const querySnapshot = await getDocs(q);
+        querySnapshot.forEach((doc) => {
+            response.push([doc.id, doc.data()])
+        });
+        resolve(response)
+    })
+}
+
+export async function getSurveyData(id) {
+    return new Promise(async(resolve)=> {
+        let response = []
+        const querySnapshot = await getDocs(collection(db, "surveys", `${id}`, "surveyItens"));
+        querySnapshot.forEach((doc) => {        
+            response.push(doc.data())            
+        });     
+        resolve(response)   
+    })
+}
 
 export async function createSurveyData(surveyTitle, surveyAnswers) {
     return new Promise(async (resolve) => {
