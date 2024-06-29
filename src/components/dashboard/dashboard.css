@@ -19,6 +19,7 @@
     background: var(--primary-color);
     border-radius: 10px;
     padding: 20px;
+    cursor: pointer;
 }
 
 .dashboard__p {

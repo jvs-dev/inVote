@@ -97,6 +97,8 @@ function loadPage() {
                     introSection.classList.remove("active")
                     homeSection.style.display = "none"
                     viewInvoteSection.classList.add("active")
+                } else {
+                    window.location.href=`${window.location.origin}`
                 }
             })
         }

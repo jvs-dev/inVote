@@ -83,4 +83,5 @@
     color: var(--black);
     margin: 8px 0px;
     z-index: 0;
+    cursor: pointer;
 }

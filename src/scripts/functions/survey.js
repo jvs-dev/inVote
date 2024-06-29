@@ -112,8 +112,7 @@ export async function loadSurvey(id) {
                             selectBtn.innerHTML = `<ion-icon name="checkmark-outline"></ion-icon>`
                             itemSelectedId = `${awnser.id}`
                             itemSelectedName = `${awnser.data().title}`
-                            itemSelected = true
-                            console.log(itemSelectedId);
+                            itemSelected = true                            
                         }
                     }
                     resolve("sucess")

@@ -61,4 +61,5 @@
     background: var(--white);
     color: var(--black);
     margin: 8px 0px;
+    cursor: pointer;
 }

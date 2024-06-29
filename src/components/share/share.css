@@ -69,6 +69,7 @@
     border: 0px;
     height: 34px;
     width: 34px;    
+    cursor: pointer;
 }
 
 .share__btn {
@@ -83,4 +84,5 @@
     background: var(--white);
     color: var(--black);
     margin: 8px 0px;
+    cursor: pointer;
 }
