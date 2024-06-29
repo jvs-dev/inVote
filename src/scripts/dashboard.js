@@ -23,6 +23,7 @@ reCopyLink.addEventListener("click", function () {
 function loadDashboard() {
     let dashboardSection = document.getElementById("dashboardSection")
     let inVoteDataDiv = document.getElementById("inVoteDataDiv")
+    let inVoteDataTitle = document.getElementById("inVoteDataTitle")
     verifyUserLogin().then(user => {
         if (user != undefined) {
             getMySurveys(user.email).then(res => {
@@ -35,6 +36,8 @@ function loadDashboard() {
                         <span class="dashboard__span">${element[1].votes} votos</span>
                     `
                     article.onclick = function () {
+                        inVoteDataDiv.innerHTML = ""
+                        inVoteDataTitle.textContent = `${element[1].surveyTitle == "" ? "Sem Titulo" : element[1].surveyTitle}`
                         document.getElementById("inVoteDataLink").textContent = `${window.location.origin}/#${element[0]}`
                         alterToSection(document.getElementById("inVoteDataSection"))
                         getSurveyData(element[0]).then(answerData => {
