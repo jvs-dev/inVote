@@ -18,6 +18,9 @@
   <link rel="stylesheet" href="src/components/home/home.css">
   <link rel="stylesheet" href="src/components/create/create.css">
   <link rel="stylesheet" href="src/components/share/share.css">
+  <link rel="stylesheet" href="src/components/viewInVote/viewInVote.css">
+  <link rel="stylesheet" href="src/components/error/error.css">
+  <link rel="stylesheet" href="src/components/respondedForm/respondedForm.css">
   <title>InVote</title>
 </head>
 
@@ -76,7 +79,22 @@
 
     </section>
     <section class="main__section main__viewInvote" id="viewInvoteSection">
+      <input class="viewInvote__input" type="text" id="voterName" placeholder="Digite seu nome">
+      <div class="viewInvote__div" id="viewInvoteDiv">
 
+      </div>
+      <button class="viewInvote__confirm" id="confirmInVote">Confirmar</button>
+    </section>
+
+    <section class="main__section main__respondedForm" id="respondedForm">
+      <img class="respondedForm__img" src="src/assets/sendImage.svg" alt="">
+      <h1 class="respondedForm__h1">Você respondeu a esse formulario</h1>
+      <p class="respondedForm__name" id="respondedName"></p>
+      <div class="respondedForm__div">
+        <p class="respondedForm__p">Opção Marcada:</p>
+        <span class="respondedForm__itemSelected" id="respondedItem"></span>
+      </div>
+      <!-- <button class="respondedForm__btn" id="alterInVote">Alterar</button> -->
     </section>
   </main>
   <footer class="footer active" id="footer">
@@ -86,6 +104,7 @@
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script type="module" src="src/scripts/index.js"></script>
   <script type="module" src="src/scripts/createSurvey.js"></script>
+  <script type="module" src="src/scripts/viewSurvey.js"></script>
 </body>
 
 </html>

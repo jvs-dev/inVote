@@ -1,0 +1,86 @@
+.main__respondedForm {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 80px 20px 0px 20px;
+}
+
+.respondedForm__img {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 90vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.respondedForm__h1 {
+    font-family: "Poppins", sans-serif;    
+    text-transform: capitalize;
+    width: 100%;    
+    text-align: left;    
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 115%;
+    color: var(--white);    
+    padding: 0px 10% 0px 0px;
+    margin: 0px;
+}
+
+.respondedForm__name {
+    font-family: "Poppins", sans-serif;        
+    width: 100%;    
+    text-align: left;    
+    font-weight: 400;
+    font-size: 15px;    
+    color: var(--white);    
+    padding: 0px 20% 0px 0px;
+    margin: 10px 0px 10px 0px;   
+}
+
+.respondedForm__div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 80px 0px 40px 0px;
+    gap: 5px;
+}
+
+.respondedForm__p {
+    font-family: "Poppins", sans-serif;        
+    width: 100%;    
+    text-align: center;    
+    font-weight: 500;
+    font-size: 18px;    
+    color: var(--white);        
+    margin: 0px;   
+}
+
+.respondedForm__itemSelected {
+    font-family: "Poppins", sans-serif;        
+    width: 100%;    
+    text-align: center;    
+    font-weight: 500;
+    font-size: 14px;    
+    color: var(--white-gray);        
+    margin: 0px;
+}
+
+.respondedForm__btn {    
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    border: 0px;
+    outline-width: 0px;
+    border-radius: 6px;
+    padding: 4px 0px;
+    width: 180px;
+    background: var(--white);
+    color: var(--black);
+    margin: 8px 0px;
+    z-index: 0;
+}

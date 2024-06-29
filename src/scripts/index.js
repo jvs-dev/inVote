@@ -1,4 +1,5 @@
 import { alterToSection } from "./functions/alterSection"
+import { loadSurvey } from "./functions/survey"
 import { signIn, verifyUserLogin } from "./functions/user"
 
 let footer = document.getElementById("footer")
@@ -8,6 +9,8 @@ let newInVote = document.getElementById("newInVote")
 let perfilBtn = document.getElementById("perfilBtn")
 let shareSectionLink = document.getElementById("shareSectionLink");
 let copyLink = document.getElementById("copyLink")
+let viewInvoteSection = document.getElementById("viewInvoteSection")
+let homeSection = document.getElementById("homeSection")
 
 copyLink.onclick = function () {
     let tempInput = document.createElement("input");
@@ -56,9 +59,26 @@ function loadPage() {
             }, 1000);
         })
     } else {
-        header.classList.remove("active")
-        footer.classList.remove("active")
-        introSection.classList.remove("active")
+        if (localStorage.getItem(`${window.location.hash.replace("#", "")}`) != null) {
+            let obj = JSON.parse(localStorage.getItem(`${window.location.hash.replace("#", "")}`))            
+            footer.classList.remove("active")
+            introSection.classList.remove("active")
+            homeSection.style.display = "none"      
+            perfilBtn.style.display = "none"      
+            document.getElementById("respondedName").textContent = `${obj.name}`
+            document.getElementById("respondedItem").textContent = `${obj.itemName}`
+            alterToSection(document.getElementById("respondedForm"))
+        } else {
+            loadSurvey(window.location.hash.replace("#", "")).then(res => {
+                if (res != undefined) {
+                    header.classList.remove("active")
+                    footer.classList.remove("active")
+                    introSection.classList.remove("active")
+                    homeSection.style.display = "none"
+                    viewInvoteSection.classList.add("active")
+                }
+            })
+        }
     }
 }
 
